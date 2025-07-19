@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free online tool to compress your images while maintaining quality. Reduce file size for JPG, PNG, and WebP images quickly and easily.">
-    <meta name="keywords" content="image compressor, compress images, reduce image size, online image optimizer, JPG compressor, PNG compressor, free image compressor, photo size reducer, best image compressor, compress JPG to 100KB, PNG file size reducer, bulk image compressor, compress images for web">    <meta name="author" content="Maulik-ImageCompressorPro">
+    <meta name="keywords" content="image compressor, compress images, reduce image size, online image optimizer, JPG compressor, PNG compressor">
+    <meta name="author" content="ImageCompressor">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Free Online Image Compression Tool">
     <meta property="og:description" content="Compress your images online without losing quality. Perfect for websites, social media, and email.">
@@ -18,20 +19,10 @@
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Image Compression Tool",
-      "url": "https://yourwebsite.com",
-      "description": "Free online tool to compress images while maintaining quality",
-      "applicationCategory": "UtilityApplication",
-      "operatingSystem": "Web Browser"
-    }
-    </script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google AdSense (Replace YOUR_PUBLISHER_ID with your actual ID) -->
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
     
     <style>
@@ -61,20 +52,23 @@
             margin: 0;
         }
         
+        /* Updated Header Styles */
         header {
             background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
+            padding: 1rem 2rem;
             position: sticky;
             top: 0;
-            z-index: 1000;
-            padding: 15px 0;
+            z-index: 100;
         }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        .header-container {
+        
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -93,16 +87,18 @@
         }
         
         .logo-text {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--dark-color);
+            font-size: 1.5rem;
+            font-weight: bold;
         }
         
-        .logo-text span {
-            color: var(--primary-color);
+        .logo-text .image-part {
+            color: #000000; /* Black for "Image" */
         }
-
-    
+        
+        .logo-text .compressor-part {
+            color: var(--primary-color); /* Blue for "Compressor" */
+        }
+        
         nav ul {
             display: flex;
             list-style: none;
@@ -382,41 +378,6 @@
             font-size: 0.9rem;
         }
         
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            nav ul {
-                margin-top: 1rem;
-            }
-            
-            .result-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .compression-tool {
-                padding: 1.5rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-        
         /* Loading spinner */
         .spinner {
             display: none;
@@ -450,18 +411,60 @@
             width: 0%;
             transition: width 0.3s;
         }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            nav ul li {
+                margin-left: 1rem;
+            }
+            
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .compression-tool {
+                padding: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Updated Header with "Image" in black and "Compressor" in blue -->
     <header>
-         <div class="container header-container">
-            <a href="index.html" class="logo">
+        <div class="container header-content">
+            <a href="#" class="logo">
                 <div class="logo-icon">
                     <i class="fas fa-compress-alt"></i>
                 </div>
-                <div class="logo-text">Image<span>Compressor</span></div>
+                <div class="logo-text">
+                    <span class="image-part">Image</span>
+                    <span class="compressor-part">Compressor</span>
+                </div>
             </a>
-            
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -609,7 +612,7 @@
                 <a href="#">Contact Us</a>
                 <a href="#">API</a>
             </div>
-            <p class="copyright">© 2023 ImageCompressorPro. All rights reserved.</p>
+            <p class="copyright">© 2023 ImageCompressor. All rights reserved.</p>
         </div>
     </footer>
     
