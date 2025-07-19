@@ -88,6 +88,21 @@
             color: var(--primary-color);
             text-decoration: none;
         }
+        .logo-icon {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        
+        .logo-text span {
+            color: var(--primary-color);
+        }
         
         nav ul {
             display: flex;
@@ -441,7 +456,12 @@
 <body>
     <header>
         <div class="container header-content">
-            <a href="#" class="logo">ImageCompressorPro</a>
+            <a href="/img-Compression/index.html" class="logo">
+                 <div class="logo-icon">
+                    <i class="fas fa-compress-alt"></i>
+                </div>
+                <div class="logo-text">Image<span>Compressor</span></div>
+            </a>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
