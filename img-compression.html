@@ -69,31 +69,41 @@
             top: 0;
             z-index: 100;
         }
-        
-        .container {
+         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        .header-content {
+
+        /* Updated Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            display: flex;
+            align-items: center;
             text-decoration: none;
         }
+
         .logo-icon {
             font-size: 28px;
             color: var(--primary-color);
             margin-right: 10px;
         }
-         .logo-text {
+
+        .logo-text {
             font-size: 22px;
             font-weight: 700;
             color: #000000; /* Black for "Image" */
@@ -453,9 +463,9 @@
 </head>
 <body>
     <header>
-        <div class="container header-content">
-            <a href="/img-Compression/index.html" class="logo">
-                 <div class="logo-icon">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
                     <i class="fas fa-compress-alt"></i>
                 </div>
                 <div class="logo-text">Image<span>Compressor</span></div>
